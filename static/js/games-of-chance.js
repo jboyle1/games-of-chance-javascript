@@ -80,7 +80,86 @@ document.getElementById('resultsListener').addEventListener('click', coinFlip);
 let nextGame = () => {
     let printNextGame = `${name} shall we play a game of Cho-Han! You now have £${totalMoney001}.\n Please place a bet!`;
     document.getElementById('resultnextGame1').innerHTML = printNextGame;
-    return name
 }
-// Add an event listener for the sayhi() function.
+// Add an event listener for the nextGame() function.
 document.getElementById('nextGame1Listener').addEventListener('click', nextGame);
+
+// Get value for 'wager2' and 'guess' variables that will be used in the Cho-Han function.
+let wager2Value = () => {
+    wager2 = document.getElementById('userWager2').value;
+    let printWager2 = `Thanks, ${name} you just bet £${wager2}. Please enter odd or even`;
+    document.getElementById('printUserWager2').innerHTML = printWager2;
+    wager2 = parseInt(wager2);
+    return wager2;
+}
+// Add an event listener for the wager2Value() function.
+document.getElementById('wager2Listener').addEventListener('click', wager2Value);
+
+// Create a function that gets an odd or even value for Cho-Han function.
+let oddOrEven = () => {
+    guessOddOrEven = document.getElementById('userGuessOddOrEven').value;
+    if (guessOddOrEven === "odd" || guessOddOrEven === "Odd" || guessOddOrEven === 'even' || guessOddOrEven === 'Even') {
+    let printGuessOddOrEven = `Thanks, ${name} you Guessed ${guessOddOrEven}. Please press the 'Throw' button to play!`;
+    document.getElementById('printOddOrEven').innerHTML = printGuessOddOrEven;
+    return guessOddOrEven;
+    } else {
+        let printGuess = 'Please guess either odd or even';
+        document.getElementById('printOddOrEven').innerHTML = printGuess;
+    }
+}
+
+// Add an event listener for the oddOrEven() function.
+document.getElementById('ListenerOddOrEven').addEventListener('click', oddOrEven);
+
+// Create a function that simulates rolling two dice and adding the results together. The player predicts whether the sum of those dice is odd or even and wins if their prediction is correct.
+let choHan = () => {
+    //'dice1' & 'dice2' each generates a number between 1 & 6.
+    dice1 = Math.floor(Math.random() * 6);
+    dice2 = Math.floor(Math.random() * 6);
+
+    // Print out the values of the dice thrown
+    let printDice = `You threw ${dice1} & ${dice2}!`;
+    document.getElementById('resultOutput2').innerHTML = printDice;
+
+    // Get the modulo of the sum of the two values added together
+    let sumOfTwoDice = (dice1 + dice2) % 2
+
+    // Write a conditional statement that uses logical operators to find out if the left over modulo value in 'sumOfTwoDice' is odd or even and prints if the user has guessed correctly. This in turn adds or subtracts the new 'totalMoney001' value. 
+    if (sumOfTwoDice === 0 && (oddOrEven === "even" || oddOrEven === "Even")) {
+        // Add the 'totalMoney' to the winnings
+        totalMoney001 = totalMoney001 + (wager2 * 2);
+        let winnerEven = `Even! You have won. you have £${totalMoney001}!`;
+        document.getElementById('resultOutput3').innerHTML = winnerEven;
+        return totalMoney001;
+    } 
+    // Create an else if statement that prints if the 'sumOfTwoDice' is odd.
+    else if  (sumOfTwoDice === 0 && (oddOrEven === "odd" || oddOrEven === "Odd")) {
+        // Add the 'totalMoney' to the winnings
+        totalMoney001 = totalMoney001 + (wager2 * 2);
+        let winnerOdd = `Odd! You have won. you have £${totalMoney001}!`;
+        document.getElementById('resultOutput3').innerHTML = winnerOdd;
+        return totalMoney001;
+    } 
+    // Create an else statement that prints if the user looses.
+    else {
+        // Subtract the 'wager2 ' value from total money.
+        totalMoney001 = totalMoney001 - wager2
+        let choHanLooser = `You have Lost. you have £${totalMoney001}!`;
+        document.getElementById('resultOutput3').innerHTML = choHanLooser;
+        return totalMoney001;
+    }
+}
+
+// Add an event listener for the choHan() function.
+document.getElementById('choHanResultsListener').addEventListener('click', choHan);
+
+
+// High or Low
+
+// Create a function that moves the user onto the next game.
+let nextGame2 = () => {
+    let printNextGame = `${name} shall we play a game of Hi or Low! You now have £${totalMoney001}.\n Please place a bet!`;
+    document.getElementById('resultnextGame2').innerHTML = printNextGame;
+}
+// Add an event listener for the nextGame() function.
+document.getElementById('nextGame2Listener').addEventListener('click', nextGame2);
