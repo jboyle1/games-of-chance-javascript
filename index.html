@@ -9,64 +9,175 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat&display=swap"
             rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
         <title>Games of Chance</title>
     </head>
     <body>
         <header>
-            <div id="title">Games of Chance</div>
+            <div id="title">Games
+                <spann class="titleOf">of</spann>
+                Chance</div>
         </header>
         <main>
             <div id="greetingArea">
-                    <section>
-                        <div class="greeting">
-                            <p>Please enter your name to start Games of Chance!</p>
-                        </div>
-                        <div id="greetingInput">
-                            <input placeholder="Enter Name" id="userName">
-                            <button id="greetingListener">Submit</button>
-                        </div>
-                    </section>
-                    <section>
-                        <div id="userGreeting"></div>
-                    </section>
-                </div>
-                    <!--- Coin Flip --->
-                <div>
-                    <!--- Wager1 --->
-                    <section>
-                        <div id="wager1">
-                            <input placeholder="Enter Wager" id="userWager1">
-                            <button id="wager1Listener">Submit</button>
-                        </div>
-                    </section>
-                    <section>
-                        <div id="printUserWager1"></div>
-                    </section>
+                <section>
+                    <div class="greeting">
+                        <p>Please enter your name to start Games of Chance!</p>
+                    </div>
+                    <div id="greetingInput">
+                        <input placeholder="Enter Name" id="userName">
+                        <button id="greetingListener">Submit</button>
+                    </div>
+                </section>
 
-                    <!--- Guess --->
-                    <section>
-                        <div id="guess">
-                            <input placeholder="Enter Guess" id="userGuess">
-                            <button id="guessListener">Submit</button>
-                        </div>
-                    </section>
-                    <section>
-                        <div id="printUserGuess"></div>
-                    </section>
-
-                    <!--- Result--->
-                    <section>
-                        <div id="coinFlipResult">
-                            <button id="resultsListener">Flip</button>
-                        </div>
-                    </section>
-                    <section>
-                        <div id="resultOutput1"></div>
-                    </section>
-                </div>
             </div>
-        </main>
-        <script src="static//js/games-of-chance.js"></script>
 
-    </body>
-</html>
+            <!--- 3 Games --->
+            <div class="Games">
+
+                <!--- Coin Flip --->
+
+                <div class="row">
+                    <div class="coinFlip">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <!--- Greeting --->
+                            <section>
+
+                                <div id="userGreeting"><img src="static/images/RRBlog-CoinFlip-1594-v1.jpg"></div>
+                            </section>
+
+                            <!--- Wager1 --->
+                            <section>
+                                <div id="wager1">
+                                    <input placeholder="Enter Wager" id="userWager1">
+                                    <button id="wager1Listener">Submit</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="printUserWager1"></div>
+                            </section>
+
+                            <!--- Guess --->
+                            <section>
+                                <div id="guess">
+                                    <input placeholder="Enter Guess" id="userGuess">
+                                    <button id="guessListener">Submit</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="printUserGuess"></div>
+                            </section>
+
+                            <!--- Result --->
+                            <section>
+                                <div id="coinFlipResult">
+                                    <button id="resultsListener">Flip</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="resultOutput1"></div>
+                            </section>
+
+                            <!--- Next Game 1 --->
+                            <section>
+                                    <div id="nextGame1">
+                                        <button id="nextGame1Listener">Next</button>
+                                    </div>
+                                </section>
+                        </div>
+                    </div>
+
+                    <div class="coinFlip">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <!--- Greeting --->
+                            <section>
+
+                                <div id="resultnextGame1" class="Cho-Han"><img src="static/images/hqdefault.jpg"></div>
+                            </section>
+
+                            <!--- Wager1 --->
+                            <section>
+                                <div id="wager1">
+                                    <input placeholder="Enter Wager" id="userWager1">
+                                    <button id="wager1Listener">Submit</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="printUserWager1"></div>
+                            </section>
+
+                            <!--- Guess --->
+                            <section>
+                                <div id="guess">
+                                    <input placeholder="Enter Guess" id="userGuess">
+                                    <button id="guessListener">Submit</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="printUserGuess"></div>
+                            </section>
+
+                            <!--- Result--->
+                            <section>
+                                <div id="coinFlipResult">
+                                    <button id="resultsListener">Flip</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="resultOutput1"></div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="coinFlip">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <!--- Greeting --->
+                            <section>
+
+                                <div id="userGreeting"><img src="static/images/download.jpeg"></div>
+                            </section>
+
+                            <!--- Wager1 --->
+                            <section>
+                                <div id="wager1">
+                                    <input placeholder="Enter Wager" id="userWager1">
+                                    <button id="wager1Listener">Submit</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="printUserWager1"></div>
+                            </section>
+
+                            <!--- Guess --->
+                            <section>
+                                <div id="guess">
+                                    <input placeholder="Enter Guess" id="userGuess">
+                                    <button id="guessListener">Submit</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="printUserGuess"></div>
+                            </section>
+
+                            <!--- Result--->
+                            <section>
+                                <div id="coinFlipResult">
+                                    <button id="resultsListener">Flip</button>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="resultOutput1"></div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <script src="static//js/games-of-chance.js"></script>
+
+        </body>
+    </html>

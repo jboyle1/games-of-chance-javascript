@@ -4,10 +4,20 @@
     font-family: 'Monoton', cursive;
     text-align: center;
     font-size: 40px;
-    padding: 30px 30px;
+    padding: 30px;
     background-color: rgb(196, 164, 60);
     color: #ffffff;
     text-transform: uppercase;
+}
+
+.titleOf {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+    background-color: rgb(196, 164, 60);
+    color: #ffffff;
+    text-transform: lowercase;
 }
 
 /* /Header */
@@ -16,8 +26,8 @@
 
 #greetingArea {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
-
 /* /Main */
 
 /* Form */
@@ -42,39 +52,55 @@
     margin-top: 60px;
 }
 
+#nextGame1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
 #userName {
     font-family: 'Montserrat', sans-serif;
 }
 
-#greetingInput button, #wager1 button, #coinFlipResult button{
+#coinFlipResult button,
+#greetingInput button,
+#wager1 button {
     font-family: 'Montserrat', sans-serif;
 }
 
-button {
+!button {
     background-color: rgb(0, 0, 0);
     border: none;
     color: #ffffff;
-    padding: 3px 6px 3px 6px;
+    padding: 3px 6px;
     border-radius: 3px;
     margin-left: 4px;
 }
 
-.greeting, #userGreeting, #printUserWager1, #printUserGuess {
-    width:180px;
-    height:40px;
+#printUserGuess,
+#printUserWager1,
+.greeting, #userGreeting, .Cho-Han {
+    width: 180px;
+    height: 40px;
     margin: auto;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding-top: 20px;
     line-height: 1.2em;
-    
+
+}
+
+img {
+    text-align: center;
+    width: 180px;
+    height: 130px;
+    padding-bottom: 40px;
 }
 
 #resultOutput1 {
     font-family: 'Monoton', cursive;
     text-align: center;
     font-size: 20px;
-    padding: 30px 30px;
+    padding: 30px;
     color: #000000;
     text-transform: uppercase;
 }

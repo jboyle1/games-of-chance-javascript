@@ -51,19 +51,19 @@ let coinFlip = () => {
     // First conditional statement allows for a winning argument of 'Heads'. 1 is a match to 'Heads.
     if ((guess === "heads" || guess === "Heads") && coinSide == 1) {
         totalMoney001 = totalMoney001 + (wager1 * 2);
-        let printCoinFlip = `Heads, you won! You now have £${totalMoney001}!`;
+        let printCoinFlip = `Heads, you won! You have £${totalMoney001}!`;
         document.getElementById('resultOutput1').innerHTML = printCoinFlip;
         return totalMoney001;
     } // second conditional statement allows for a winning argument of 'Tails'. 2 is a match to 'Heads.
     else if ((guess === "tails" || guess === "Tails") && coinSide == 2) {
         totalMoney001 = totalMoney001 + (wager1 * 2);
-        let printCoinFlip = `Tails, you won! You now have £${totalMoney001}!`;
+        let printCoinFlip = `Tails, you won! You have £${totalMoney001}!`;
         document.getElementById('resultOutput1').innerHTML = printCoinFlip;
         return totalMoney001;
     } // else statement prints if you loose. E.g if logical comparison operators do not match.
     else {
         totalMoney001 = totalMoney001 - wager1;
-        let printCoinFlip = `Sorry you lost, you now have £${totalMoney001}!`;
+        let printCoinFlip = `You lost, you have £${totalMoney001}!`;
         document.getElementById('resultOutput1').innerHTML = printCoinFlip;
         return totalMoney001;
     }
@@ -71,3 +71,16 @@ let coinFlip = () => {
 
 // Add an event listener for the coinFlip() function.
 document.getElementById('resultsListener').addEventListener('click', coinFlip);
+
+// /Coin Flip
+
+// Cho-Han
+
+// Create a function that moves the user onto the next game.
+let nextGame = () => {
+    let printNextGame = `${name} shall we play a game of Cho-Han! You now have £${totalMoney001}.\n Please place a bet!`;
+    document.getElementById('resultnextGame1').innerHTML = printNextGame;
+    return name
+}
+// Add an event listener for the sayhi() function.
+document.getElementById('nextGame1Listener').addEventListener('click', nextGame);
