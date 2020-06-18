@@ -24,14 +24,19 @@
 
 #greetingInput {
     text-align: center;
-    padding: 10px 40px;
+    margin-top: 30px;
+}
+
+#wager1 {
+    text-align: center;
+    margin-top: 90px;
 }
 
 #userName {
     font-family: 'Montserrat', sans-serif;
 }
 
-#greetingInput button {
+#greetingInput button, #wager1 button{
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -44,7 +49,7 @@ button {
     margin-left: 4px;
 }
 
-#userGreeting {
+.greeting, #userGreeting, #printUserWager1 {
     width:180px;
     height:40px;
     margin: auto;
@@ -52,6 +57,7 @@ button {
     font-family: 'Montserrat', sans-serif;
     padding-top: 20px;
     line-height: 1.2em;
+    
 }
 
 /* /Form */

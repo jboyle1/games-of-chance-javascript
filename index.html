@@ -18,16 +18,31 @@
         <main>
             <div id="gameArea">
                 <section>
+                    <div class="greeting">
+                        <p>Please enter your name to start Games of Chance!</p>
+                    </div>
                     <div id="greetingInput">
                         <input placeholder="Enter Name" id="userName">
-                        <button id="greetingListener">Say hi!</button>
+                        <button id="greetingListener">Submit</button>
                     </div>
                 </section>
                 <section>
                     <div id="userGreeting"></div>
                 </section>
+
+                <!--- Coin Flip --->
+                <section>
+                    <div id="wager1">
+                        <input placeholder="Enter wager" id="userWager1">
+                        <button id="wager1Listener">Submit</button>
+                    </div>
+                </section>
+                <section>
+                    <div id="printUserWager1"></div>
+                </section>
+
             </main>
             <script src="static//js/games-of-chance.js"></script>
-            
+
         </body>
     </html>
