@@ -1,4 +1,4 @@
-### https://jboyle1.github.io/games-of-chance/
+### https://jboyle1.github.io/games-of-chance-javascript/
 
 ## Games of Chance
 
