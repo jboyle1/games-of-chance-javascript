@@ -122,10 +122,10 @@ let choHan = () => {
     document.getElementById('resultOutput2').innerHTML = printDice;
 
     // Get the modulo of the sum of the two values added together
-    let sumOfTwoDice = (dice1 + dice2) % 2
+    let sumOfTwoDice = (dice1 + dice2) % 2;
 
     // Write a conditional statement that uses logical operators to find out if the left over modulo value in 'sumOfTwoDice' is odd or even and prints if the user has guessed correctly. This in turn adds or subtracts the new 'totalMoney001' value. 
-    if (sumOfTwoDice === 0 && (oddOrEven === "even" || oddOrEven === "Even")) {
+    if (sumOfTwoDice === 0 && (guessOddOrEven === "even" || guessOddOrEven === "Even")) {
         // Add the 'totalMoney' to the winnings
         totalMoney001 = totalMoney001 + (wager2 * 2);
         let winnerEven = `Even! You have won. you have £${totalMoney001}!`;
@@ -133,7 +133,7 @@ let choHan = () => {
         return totalMoney001;
     } 
     // Create an else if statement that prints if the 'sumOfTwoDice' is odd.
-    else if  (sumOfTwoDice === 0 && (oddOrEven === "odd" || oddOrEven === "Odd")) {
+    else if  (sumOfTwoDice === 0 && (guessOddOrEven === "odd" || guessOddOrEven === "Odd")) {
         // Add the 'totalMoney' to the winnings
         totalMoney001 = totalMoney001 + (wager2 * 2);
         let winnerOdd = `Odd! You have won. you have £${totalMoney001}!`;
@@ -144,7 +144,7 @@ let choHan = () => {
     else {
         // Subtract the 'wager2 ' value from total money.
         totalMoney001 = totalMoney001 - wager2
-        let choHanLooser = `You have Lost. you have £${totalMoney001}!`;
+        let choHanLooser = `You have Lost! you have £${totalMoney001}!`;
         document.getElementById('resultOutput3').innerHTML = choHanLooser;
         return totalMoney001;
     }
@@ -163,3 +163,58 @@ let nextGame2 = () => {
 }
 // Add an event listener for the nextGame() function.
 document.getElementById('nextGame2Listener').addEventListener('click', nextGame2);
+
+// Get value for 'wager2' and 'guess' variables that will be used in the Cho-Han function.
+let wager3Value = () => {
+    wager3 = document.getElementById('userWager3').value;
+    let printWager3 = `Thanks, ${name} you just bet £${wager3}. Please enter high or low`;
+    document.getElementById('printUserWager3').innerHTML = printWager3;
+    wager3 = parseInt(wager3);
+    return wager3;
+}
+// Add an event listener for the wager2Value() function.
+document.getElementById('wager3Listener').addEventListener('click', wager3Value);
+
+// Create a function that gets an odd or even value for Cho-Han function.
+let highOrLow = () => {
+    guessHighOrLow = document.getElementById('userGuessHighOrLow').value;
+    if (guessHighOrLow === "high" || guessHighOrLow === "High" || guessHighOrLow === 'low' || guessHighOrLow  === 'Low') {
+    let printGuessHighOrLow = `Thanks, ${name} you Guessed ${guessHighOrLow}. Please press the 'Draw' button to play!`;
+    document.getElementById('printHighOrLow').innerHTML = printGuessHighOrLow;
+    return guessHighOrLow;
+    } else {
+        let printGuess = 'Please guess either high or low';
+        document.getElementById('printOddOrEven').innerHTML = printGuess;
+    }
+}
+
+// Add an event listener for the oddOrEven() function.
+document.getElementById('guessHighOrLowListener').addEventListener('click', highOrLow);
+
+
+// Create a function that simulates two players picking a card randomly from a deck of cards. The higher number wins.
+let highOrLowFunction = () => {
+    // Create 'cardNumber' variable that contains a list of numbers from 1 to 13
+    playerDraw = Math.floor(Math.random() * 13);
+    houseDraw = Math.floor(Math.random() * 13);
+
+    // Create a if statement that checks if the players Draw is higher and maches with high or vice versa using logical operators. If either match, the user is printed as the as the winner and the cards and 'totalMoney003' are printed also.
+    if ((playerDraw > houseDraw && guessHighOrLow == "high") || (playerDraw < houseDraw && guessHighOrLow == "low")) {
+        totalMoney001 = totalMoney001 + (wager3 * 2);
+        let highWin = `You won! You're new total is ${totalMoney001}\n Thanks for playing!`;
+        document.getElementById('resultOutput4').innerHTML = highWin;
+        return totalMoney001;
+    } else if ((playerDraw < houseDraw && guessHighOrLow == "high") || (playerDraw > houseDraw && guessHighOrLow == "low")) {
+        totalMoney001 = totalMoney001 + (wager3 * 2);
+        let highLoose = `Sorry you lost!  You're new total is ${totalMoney001}\n Thanks for playing!`;
+        document.getElementById('resultOutput4').innerHTML = highLoose;
+        return totalMoney001;
+    } else {
+        totalMoney003 = totalMoney002;
+        let highLoose = `The result is a tieYou're new total is ${totalMoney001}\n Thanks for playing!`;
+        document.getElementById('resultOutput4').innerHTML = highLoose;
+    }
+}
+
+// Add an event listener for the highOrLow() function.
+document.getElementById('HighOrLowresultsListener').addEventListener('click', highOrLowFunction);
