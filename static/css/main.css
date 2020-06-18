@@ -32,6 +32,11 @@
     margin-top: 90px;
 }
 
+#guess {
+    text-align: center;
+    margin-top: 35px;
+}
+
 #userName {
     font-family: 'Montserrat', sans-serif;
 }
@@ -49,7 +54,7 @@ button {
     margin-left: 4px;
 }
 
-.greeting, #userGreeting, #printUserWager1 {
+.greeting, #userGreeting, #printUserWager1, #printUserGuess {
     width:180px;
     height:40px;
     margin: auto;
